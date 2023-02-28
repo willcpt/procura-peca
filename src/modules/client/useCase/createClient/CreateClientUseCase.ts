@@ -13,9 +13,7 @@ export class CreateClientUseCase {
     //Validar se o usuario existe
     const clientExist = await prisma.user.findFirst({
         where: {
-            username: {
-                mode: "insensitive"
-            }
+            username
         }
     });
 

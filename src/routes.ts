@@ -12,7 +12,7 @@ const authenticateClientController = new AuthenticateClientController();
 const createClientController = new CreateClientController();
 const createProductController = new CreateProductController();
 const uploadImageProductController = new UploadImageProductController();
-const upload = multer(uploadConfig.upload("./tmp/product/images"));
+const upload = multer(uploadConfig);
 
 
 routes.post("/product/image/:id_product", upload.array("file"), uploadImageProductController.handle);
